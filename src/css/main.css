@@ -98,23 +98,26 @@ hr {
   color: #3d4451; }
 
 .top {
-  padding: 0px 16px; }
+  padding: 0 16px;
+display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .topNavBar .logo {
-  padding: 3px 0px 4px 0px;
+  padding: 3px 0 4px 0;
   font-family: 'Arial Black';
   font-size: 24px;
-  float: left; }
+  }
 
 .topNavBar .logo .rs {
-  color: #E6686A;
-  margin-right: 4px; }
+  color: #2C97E8;
+   }
 
 .topNavBar .logo .card {
   color: #9A9DA2; }
 
 .topNavBar nav {
-  float: right;
   padding-top: 7px; }
 
 .topNavBar nav > ul {
@@ -146,7 +149,7 @@ hr {
   top: 100%;
   left: 0;
   width: 100%;
-  background: #e06567;
+  background: #2C97E8;
   height: 3px;
   animation: menuSlide 0.3s; }
 
@@ -196,7 +199,7 @@ hr {
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.5); }
 
 .usercard .welcome {
-  background-color: #e6686a;
+  background-color: #2C97E8;
   color: white;
   display: inline-block;
   padding: 4px 16px;
@@ -206,7 +209,7 @@ hr {
 .usercard .welcome .triangle {
   display: block;
   border: 10px solid transparent;
-  border-left-color: #e6686a;
+  border-left-color: #2C97E8;
   width: 0px;
   border-top-width: 0px;
   position: absolute;
@@ -241,7 +244,7 @@ hr {
   color: #9da0a7; }
 
 .usercard > footer.media {
-  background-color: #e6686a;
+  background-color: #2C97E8;
   text-align: center; }
 
 .usercard svg {
@@ -258,7 +261,7 @@ hr {
   margin: 16px 60px; }
 
 .usercard > footer.media > a:hover {
-  background-color: #cf5d5f; }
+  background-color: #334189; }
 
 body > main {
   margin-top: -340px; }
@@ -283,16 +286,6 @@ main > .downloadResumeP > .downloadResume:hover {
 main > .downloadResumeP {
   text-align: center;
   display: block; }
-
-main > .selfintroduction {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  font-weight: bold;
-  line-height: 1.8;
-  font-family: KaiTi;
-  font-size: 22px; }
 
 .skills,
 .portfolio,
@@ -330,14 +323,14 @@ main > .selfintroduction {
 
 .skills .progressBar {
   height: 5px;
-  background: #fae1e1;
+  background: #F1F6FB;
   border-radius: 2px;
   margin: 4px 0 40px;
   overflow: hidden; }
 
 .skills .progress {
   height: 100%;
-  background: #e6686a;
+  background: #2C97E8;
   border-radius: 2px;
   transform: translateX(0);
   transition: all 1s; }

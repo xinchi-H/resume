@@ -39,7 +39,7 @@
     scrollToElement: function scrollToElement(element) {
       var top = element.offsetTop;
       var currentTop = window.scrollY;
-      var targetTop = top - 80;
+      var targetTop = top - 120;
       var s = targetTop - currentTop; //路程
 
       var t = Math.abs(s / 100 * 300); //时间

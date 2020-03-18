@@ -18,7 +18,7 @@ hr{height: 0;border: none;border-top: 1px solid #dedede;}
 .topNavBar.sticky{background: white;z-index: 1;padding: 10px 0px;box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);color: #3d4451;}
 .top{padding: 0px 16px;}
 .topNavBar .logo{padding: 3px 0px 4px 0px;font-family: 'Arial Black';font-size: 24px;float: left;}
-.topNavBar .logo .rs {color: #E6686A;margin-right: 4px;}
+.topNavBar .logo .rs {color: #2C97E8;margin-right: 4px;}
 .topNavBar .logo .card {color: #9A9DA2;}
 .topNavBar nav{float: right;padding-top: 7px;}
 .topNavBar nav>ul{margin: 0px;padding: 0px;}
@@ -34,8 +34,8 @@ hr{height: 0;border: none;border-top: 1px solid #dedede;}
 .banner{height: 515px;background-position: center center;background-size: cover;}
 .banner .mask{height: 515px;background: rgba(0,0,0,0.8);}
 .usercard{max-width: 940px;margin-left: auto;margin-right: auto;background-color: #fff;box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.5);}
-.usercard .welcome{background-color: #e6686a;color: white;display: inline-block;padding: 4px 16px;position: relative;margin-bottom: 10px;}
-.usercard .welcome .triangle{display: block;border: 10px solid transparent;border-left-color: #e6686a;width: 0px;border-top-width: 0px;position: absolute;top: 100%;left: 4px;}
+.usercard .welcome{background-color: #2C97E8;color: white;display: inline-block;padding: 4px 16px;position: relative;margin-bottom: 10px;}
+.usercard .welcome .triangle{display: block;border: 10px solid transparent;border-left-color: #2C97E8;width: 0px;border-top-width: 0px;position: absolute;top: 100%;left: 4px;}
 .usercard .pictureAndText{padding: 50px 50px;}
 .usercard .text{margin-left: 65px;width: 470px;}
 .usercard .text h1{margin-top: 18px;}
@@ -44,7 +44,7 @@ hr{height: 0;border: none;border-top: 1px solid #dedede;}
 .usercard dl dd{float: left;}
 .usercard dl dt{width: 30%;padding: 5px  0px;font-weight: bold;}
 .usercard dl dd{width: 70%;padding: 5px  0px;color: #9da0a7;}
-.usercard > footer.media{background-color: #e6686a;text-align: center;}
+.usercard > footer.media{background-color: #2C97E8;text-align: center;}
 .usercard svg{width: 30px;height: 30px;fill: white;vertical-align: top;}
 .usercard>footer.media>a{display: inline-block;border-radius: 50%;line-height: 30px;padding: 5px;margin: 16px 60px;}
 .usercard>footer.media>a:hover{background-color: #cf5d5f;}
@@ -64,7 +64,7 @@ main>.selfintroduction{max-width: 940px;margin-left: auto;margin-right: auto;tex
     .message>h2{text-align: center;color: #3d4451;font-size: 34px;line-height: 1.2;font-weight: 600;}
 .skills h3{font-weight: normal;font-size: 14px;line-height: 1.1;padding-right: 40px;}
 .skills .progressBar{height: 5px;background: #fae1e1;border-radius: 2px;margin: 4px 0 40px;overflow: hidden;}
-.skills .progress{height: 100%;background: #e6686a;border-radius: 2px;transform: translateX(0);transition: all 1s;}
+.skills .progress{height: 100%;background: #2C97E8;border-radius: 2px;transform: translateX(0);transition: all 1s;}
 .skills.offset .progress{transform: translateX(-100%);}
 .skills > ol > li:nth-child(even){float: right;}
 .portfolio{text-align: center}

@@ -1,11 +1,11 @@
 !function () {
-    var view = View('nav.menu')
+    var view = View('nav.menu');
     var controller = {
         view: null,
         aTags: null,
         init: function (view) {
-            this.view = view
-            this.initAnimation()
+            this.view = view;
+            this.initAnimation();
             this.bindEvents()
         },
         initAnimation: function () {
@@ -18,23 +18,23 @@
             requestAnimationFrame(animate);
         },
         bindEvents: function () {
-            let aTags = this.view.querySelectorAll('nav.menu > ul > li > a')
+            let aTags = this.view.querySelectorAll('nav.menu > ul > li > a');
             for (let i = 0; i < aTags.length; i++) {
                 aTags[i].onclick = (x) => {
-                    x.preventDefault()
-                    let a = x.currentTarget
-                    let href = a.getAttribute('href')
-                    let element = document.querySelector(href)
+                    x.preventDefault();
+                    let a = x.currentTarget;
+                    let href = a.getAttribute('href');
+                    let element = document.querySelector(href);
                     this.scrollToElement(element)
                 }
             }
         },
         scrollToElement: function (element) {
-            let top = element.offsetTop
-            let currentTop = window.scrollY
-            let targetTop = top - 80
-            let s = targetTop - currentTop //路程
-            var t = Math.abs((s / 100) * 300) //时间
+            let top = element.offsetTop;
+            let currentTop = window.scrollY;
+            let targetTop = top - 80;
+            let s = targetTop - currentTop; //路程
+            var t = Math.abs((s / 100) * 300); //时间
             if (t > 500) { t = 500 }
             var coords = { y: currentTop }; //起始位置
             var tween = new TWEEN.Tween(coords) //起始位置
@@ -45,11 +45,11 @@
                 })
                 .start();  //window.scrollTo(0, top - 80)
         },
-    }
+    };
 
     controller.init(view)
 
-}.call()
+}.call();
 
 
 /*
