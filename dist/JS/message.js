@@ -50,10 +50,11 @@
         'name': name,
         'content': content
       }).then(function (message) {
+        var firstLi = messageList.children[0]
         var li = document.createElement('li');
         li.innerText = "".concat(message.attributes.name, ": ").concat(message.attributes.content);
 
-        _this3.messageList.appendChild(li);
+        _this3.messageList.insertBefore(li,firstLi);
 
         myForm.querySelector('input[name=content]').value = '';
         console.log(message);
