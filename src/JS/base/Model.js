@@ -15,6 +15,10 @@ window.Model = function (options) {
         //获取数据
         fetch: function () {
             var query = new AV.Query(resourceName);
+            var now = new Date();
+            query.lessThan('createdAt', now); // 查询今天之前的数据
+            query.limit(10);  // 最多返回10条结果
+            query.descending('createdAt');
             return query.find()
         },
         //发送数据

@@ -33,9 +33,10 @@
             let name = myForm.querySelector('input[name=name]').value
             let content = myForm.querySelector('input[name=content]').value
             this.model.post({ 'name': name, 'content': content }).then((message) => {
+                let firstLi = this.messageList.children[0]
                 let li = document.createElement('li')
                 li.innerText = `${message.attributes.name}: ${message.attributes.content}`
-                this.messageList.appendChild(li)
+                this.messageList.insertBefore(li,firstLi);
                 myForm.querySelector('input[name=content]').value = ''
                 console.log(message)
             })
