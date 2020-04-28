@@ -1,5 +1,3 @@
-"use strict";
-
 !function () {
   var view = View('#message');
   var model = Model({
@@ -8,54 +6,42 @@
   var controller = Controller({
     messageList: null,
     form: null,
-    init: function init() {
+    init: function () {
       this.model.initAV();
       this.messageList = view.querySelector('#messageList');
       this.form = view.querySelector('#postMessageForm');
       this.loadMessages();
     },
-    loadMessages: function loadMessages() {
-      var _this = this;
-
+    loadMessages: function () {
       //获取留言
-      this.model.fetch().then(function (messages) {
-        var array = messages.map(function (item) {
-          return item.attributes;
-        });
-        array.forEach(function (item) {
-          var li = document.createElement('li');
-          li.innerText = "".concat(item.name, ": ").concat(item.content);
-
-          _this.messageList.appendChild(li);
+      this.model.fetch().then(messages => {
+        let array = messages.map(item => item.attributes);
+        array.forEach(item => {
+          let li = document.createElement('li');
+          li.innerText = `${item.name}: ${item.content}`;
+          this.messageList.appendChild(li);
         });
       });
     },
-    bindEvents: function bindEvents() {
-      var _this2 = this;
-
-      this.form.addEventListener('submit', function (e) {
+    bindEvents: function () {
+      this.form.addEventListener('submit', e => {
         e.preventDefault();
-
-        _this2.postMessage();
+        this.postMessage();
       });
     },
-    postMessage: function postMessage() {
-      var _this3 = this;
-
+    postMessage: function () {
       //提交留言
-      var myForm = this.form;
-      var name = myForm.querySelector('input[name=name]').value;
-      var content = myForm.querySelector('input[name=content]').value;
+      let myForm = this.form;
+      let name = myForm.querySelector('input[name=name]').value;
+      let content = myForm.querySelector('input[name=content]').value;
       this.model.post({
         'name': name,
         'content': content
-      }).then(function (message) {
-        var firstLi = messageList.children[0]
-        var li = document.createElement('li');
-        li.innerText = "".concat(message.attributes.name, ": ").concat(message.attributes.content);
-
-        _this3.messageList.insertBefore(li,firstLi);
-
+      }).then(message => {
+        let firstLi = this.messageList.children[0];
+        let li = document.createElement('li');
+        li.innerText = `${message.attributes.name}: ${message.attributes.content}`;
+        this.messageList.insertBefore(li, firstLi);
         myForm.querySelector('input[name=content]').value = '';
         console.log(message);
       });

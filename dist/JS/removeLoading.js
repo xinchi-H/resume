@@ -1,23 +1,18 @@
-"use strict";
-
 !function () {
   var view = View('#Loading');
   var controller = {
     view: null,
-    init: function init(view) {
+    init: function (view) {
       this.view = view;
       this.removeLoading();
     },
-    removeLoading: function removeLoading() {
-      var _this = this;
-
+    removeLoading: function () {
       //Loading动画结束
-      setTimeout(function (x) {
-        _this.removeClassList(); //view.classList.remove('active')
-
+      setTimeout(x => {
+        this.removeClassList(); //view.classList.remove('active')
       }, 1000);
     },
-    removeClassList: function removeClassList() {
+    removeClassList: function () {
       this.view.classList.remove('active');
     }
   };

@@ -1,5 +1,3 @@
-"use strict";
-
 !function () {
   var view = View('#mySlides');
   var controller = {
@@ -15,11 +13,11 @@
         prevEl: '.swiper-button-prev'
       }
     },
-    init: function init(view) {
+    init: function (view) {
       this.view = view;
       this.initSwiper();
     },
-    initSwiper: function initSwiper() {
+    initSwiper: function () {
       //初始化Swiper
       this.swiper = new Swiper(this.view.querySelector('.swiper-container'), this.swiperOptions);
     }
